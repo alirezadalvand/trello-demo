@@ -1,0 +1,43 @@
+{
+  "name": "trello",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon lib/server.js",
+    "front-end": "npm start --prefix front-end",
+    "concurrently": "concurrently \"npm run server\" \"npm run front-end\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/banirezaie/APS-backend.git"
+  },
+  "author": "alireza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/banirezaie/APS-backend/issues"
+  },
+  "homepage": "https://github.com/banirezaie/APS-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "gravatar": "^1.8.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.7",
+    "needle": "^3.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "delay": 2500,
+    "env": {
+      "PORT": 7000
+    }
+  }
+}
